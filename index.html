@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <title>TimeZone</title>
+  </head>
+  <body>
+    <div class="container m-5">
+      <div class="row">
+        <div class="col-md-6 m-auto">
+          <h3 class="text-center mb-3">
+            <i class="fas fa-flag-usa">Time Zone of any country</i>
+          </h3>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control form-control-lg"
+              id="country"
+              placeholder="Enter your country or abbreviation"
+            />
+          </div>
+          <div id="match-list"></div>
+
+          <div class="">
+            <p id="show" style="text-align: center; font-size: xx-large"></p>
+          </div>
+
+          <div style="margin-top: 50px">
+            <h3 class="text-center mb-3"><i>Alarm</i></h3>
+            <input
+              type="datetime-local"
+              class="form-control form-control-lg"
+              id="alarmTime"
+            />
+            <button
+              class="btn btn-info"
+              onclick="setAlarm(this);"
+              id="alarmButton"
+            >
+              Set Alarm
+            </button>
+
+            <div id="alarmOptions" style="display: none">
+              <button onclick="snooze();" class="btn btn-info">
+                Snooze 5 Minutes
+              </button>
+              <button onclick="stopAlarm();" class="btn btn-danger">
+                Stop Alarm
+              </button>
+            </div>
+            <div style="margin-top: 30px">
+              <h3 class="text-center mb-3"><i>Monitor</i></h3>
+              <p
+                id="countdown"
+                style="text-align: center; font-size: -webkit-xxx-large"
+              ></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
